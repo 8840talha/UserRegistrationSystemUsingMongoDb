@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <title>Document</title>
+    <style>
+    
+     .jumbotron{
+        border-radius: 5px;
+      width: 600px;
+      height: 600px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    } 
+    </style>
+</head>
+<body>
+  
+<form class="col-md-4 jumbotron" action="/signup" method="POST"> 
+   
+        <% for(var i=0; i<message.length; i++) { %>
+          <li class="alert-danger">
+              <%= message[i].msg %>
+          </li>
+
+          <%  }%>
+        
+  <h1>User Registration</h1>
+  <label for="name">Name</label>
+<input type="text" id="n" name ="username" class="form-control" placeholder="John Doe"><br>
+<label for="email">Email</label>
+<input type="email" id="e" name ="email" class="form-control" placeholder="xyz@gmail.com"><br>
+<label for="phone">Phone Number</label>
+<input type="tel"id="t" name ="tele" class="form-control"placeholder="9898392929" required><br>
+<label for="name">Date</label>
+<input type="date" id="d" name ="date" class="form-control" required><br>
+<input type="submit"  value="Register">
+
+</form> 
+
+
+</body>
+</html>
